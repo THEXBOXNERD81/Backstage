@@ -1,0 +1,343 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* @font-face {font-family: "Creampuff"; src: url("//db.onlinewebfonts.com/t/a4ef869641d83f61209f859d9e64eb4b.eot"); src: url("//db.onlinewebfonts.com/t/a4ef869641d83f61209f859d9e64eb4b.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/a4ef869641d83f61209f859d9e64eb4b.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/a4ef869641d83f61209f859d9e64eb4b.woff") format("woff"), url("//db.onlinewebfonts.com/t/a4ef869641d83f61209f859d9e64eb4b.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/a4ef869641d83f61209f859d9e64eb4b.svg#Creampuff") format("svg");  } */
+
+@font-face {font-family: "ISOCTEUR"; src: url("//db.onlinewebfonts.com/t/a96215c9d9ddf6f69b603c331081496e.eot"); src: url("//db.onlinewebfonts.com/t/a96215c9d9ddf6f69b603c331081496e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/a96215c9d9ddf6f69b603c331081496e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/a96215c9d9ddf6f69b603c331081496e.woff") format("woff"), url("//db.onlinewebfonts.com/t/a96215c9d9ddf6f69b603c331081496e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/a96215c9d9ddf6f69b603c331081496e.svg#ISOCTEUR") format("svg"); }
+body.fp-issue0 {
+  background-color: #12180d;
+  color: white;
+}
+
+body.fp-issue1 {
+  background-color: #09683e;
+  color:white;
+}
+
+body.fp-issue2 {
+  background-color: #000000;
+  color: white;
+}
+
+body.fp-issue3 {
+  background-color: #76d7a2;
+}
+
+body.fp-issue4 {
+  background-color: #050505;
+}
+
+
+
+/* Header */
+
+.header {
+  height:0px;
+}
+
+.title, .artist, .song {
+  position: fixed;
+  font-family: serif;
+  font-size: 4em;
+  top: 20px;
+  left: 10px;
+
+}
+.artist {
+  top: 2px;
+  left: 13px;
+  font-size: 2em;
+}
+
+.song {
+  /* -200% --> 85.7% */
+  right:20px;
+  top: -5px;
+  text-align: right;
+  font-size: 3em;
+
+}
+
+/* front-page color */
+
+
+body {
+  background-color: yellow;
+  font-family: Arial serif;
+  height: 100%;
+  overflow: hidden;
+  transition: background-color 500ms ease-out 200ms;
+}
+
+.footer {
+  position: relative;
+}
+
+.issue {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  font-size: 26px;
+}
+
+.play {
+  position: fixed;
+  bottom: 15px;
+  right: 0px;
+}
+
+#main {
+  align-content: center;
+  padding: 0;
+  position: relative;
+}
+
+.img {
+  max-width: 500px;
+  min-height: 500px;
+}
+
+.issues {
+  /* display: table;
+  table-layout: fixed;
+  width: 100%; */
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  /* color: white; */
+  overflow: hidden;
+
+}
+
+h3 {
+  padding-top: 20px;
+}
+
+.cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+}
+
+
+.picture {
+  box-shadow: .5px .5px 1px 1px black;
+}
+
+/* footer */
+
+.info {
+  position: fixed;
+  bottom: 0px;
+}
+
+.button {
+  width: 60px;
+  height: 60px;
+}
+
+@media (max-width: 1050px) {
+  .info {
+    font-size: 14px;
+  }
+
+  #rating {
+    font-size: 16px;
+  }
+
+  .cover {
+    font-size: 16px;
+  }
+
+  .artist {
+    font-size: 23px;
+  }
+
+  .song {
+    font-size: 36px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 980px) and (max-width:981) {
+  #rating{
+    font-size: 36px;
+  }
+  .cover {
+    font-size: 26px;
+  }
+  .artist{
+    font-size: 36px;
+  }
+  .title, .song {
+    font-size: 46px;
+  }
+  .title {
+    margin-top: 2rem;
+    margin-left: 0.3rem;
+  }
+  .info {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 780px) {
+  .info {
+    font-size: 14px;
+  }
+
+  .img, .picture {
+    width: 350px;
+    min-height: 350px;
+  }
+
+  #rating {
+    font-size: 16px;
+  }
+
+  .cover {
+    font-size: 16px;
+  }
+
+  .artist {
+    font-size: 23px;
+  }
+
+  .song {
+    font-size: 36px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 650px) {
+  .info {
+    font-size: 12px;
+  }
+
+  .col-xs-4 {
+    flex: 0 0 auto;
+    width: 50% !important;
+  }
+
+  .img,
+  .picture {
+    width: 350px;
+    min-height: 350px;
+  }
+
+  #rating {
+    font-size: 16px;
+  }
+
+  .cover {
+    font-size: 16px;
+  }
+
+  .artist {
+    font-size: 20px;
+  }
+
+  .song {
+    font-size: 30px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .info {
+    visibility: hidden;
+  }
+
+  .col-xs-4 {
+    flex: 0 0 auto;
+    width: 50% !important;
+  }
+
+  .img,
+  .picture {
+    width: 350px;
+    min-height: 350px;
+  }
+
+  #rating {
+    font-size: 16px;
+  }
+
+  .cover {
+    font-size: 16px;
+  }
+
+  .artist {
+    font-size: 16px;
+  }
+
+  .song {
+    font-size: 26px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 470px) {
+  .info {
+    visibility: hidden;
+  }
+
+  .col-xs-4 {
+    flex: 0 0 auto;
+    width: 50% !important;
+  }
+
+  .issue {
+    font-size: 20px;
+  }
+
+  .img,
+  .picture {
+    width: 300px;
+    min-height: 300px;
+  }
+
+  #rating {
+    font-size: 13px;
+  }
+
+  .button{
+    width: 40px;
+    height: 40px;
+  }
+
+  .cover {
+    font-size: 13px;
+  }
+
+  .artist {
+    font-size: 12px;
+  }
+
+  .song {
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+}
